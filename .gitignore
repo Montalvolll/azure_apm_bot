@@ -5,4 +5,4 @@ __pycache__/
 data.json
 
 # App ID and secrets
-config/
+config.py
