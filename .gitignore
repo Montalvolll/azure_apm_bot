@@ -1,3 +1,8 @@
+# Python cache
 __pycache__/
+
+#Static bookings data
 data.json
+
+# App ID and secrets
 config/
