@@ -3,10 +3,17 @@
 # Licensed under the MIT License.
 
 import os
+from pathlib import Path
+from dotenv import load_dotenv
+
 
 class DefaultConfig:
     """ Bot Configuration """
 
+    env_path = Path('.') / '.env'
+    load_dotenv(dotenv_path=env_path)
+
     PORT = 3978
-    APP_ID = os.environ.get("MicrosoftAppId", "af159227-35b2-4d92-b8f5-e125644ca09c")
-    APP_PASSWORD = os.environ.get("MicrosoftAppPassword", "9ZE8Q~3ThmvS~3empv3mOlJkcvY3~Ik0Z~wiwc67")
+    APP_ID = os.environ.get("MicrosoftAppId", os.environ['APP_ID_'])
+    APP_PASSWORD = os.environ.get(
+        "MicrosoftAppPassword", os.environ['APP_PASSWORD_'])
